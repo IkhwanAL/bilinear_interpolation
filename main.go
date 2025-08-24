@@ -46,7 +46,7 @@ func main() {
 
 	rgbaImage := toRGBA(img)
 
-	res := BilinearInterpolation(rgbaImage, 400, 400)
+	res := BilinearInterpolation(rgbaImage, 400, 200)
 
 	OutputImageForDebugResult(res, "./img/ScaleBilinear.jpg")
 

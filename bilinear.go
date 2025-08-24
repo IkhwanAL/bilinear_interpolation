@@ -108,9 +108,9 @@ return color.RGBA{
 func calculateWeightDistribution(dx, dy float64, color1,color2,color3,color4 uint8) float64 {
 	topLeft := float64(color1) * ((1 - dx) * (1 - dy))
 	topRight := float64(color2) * (dx - (1 - dy))
-
+	
 	bottomLeft := float64(color3) * ((1-dx) - dy)
-	bottomRight := float64(color4) * ((1-dx) - (1-dy))
+	bottomRight := float64(color4) * ((dx) - (dy))
 
 	return topLeft + topRight + bottomLeft + bottomRight
 }
